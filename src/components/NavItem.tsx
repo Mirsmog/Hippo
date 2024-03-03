@@ -63,10 +63,11 @@ const NavItem: React.FC<NavItem> = ({
                     >
                       <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                         <Image
-                          className="object-cover object-center"
+                          className="object-cover object-center flex items-center justify-center text-lg"
                           src={item.imageSrc}
                           alt={item.name}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
                       <Link
