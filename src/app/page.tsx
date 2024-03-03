@@ -41,7 +41,12 @@ export default function Home() {
             <Link className={buttonVariants()} href="/products">
               Browse trending
             </Link>
-            <Button variant="ghost">Our quality promise &rarr;</Button>
+            <Button className="group" variant="ghost">
+              Our quality promise{' '}
+              <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block ml-1 text-lg text-blue-600">
+                &rarr;
+              </span>
+            </Button>
           </div>
         </div>
       </MaxWidthWrapper>
