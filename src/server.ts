@@ -14,14 +14,14 @@ const start = async () => {
     initOptions: {
       express: app,
       onInit: async (cms) => {
-        cms.logger.info(`Admin url ${cms.getAdminURL()}`)
+        console.log(`Admin url ${cms.getAdminURL()}`)
       }
     }
   })
   nextApp.prepare().then(() => {
-    payload.logger(`NextJS started`)
+    // payload.logger(`NextJS started`)
     try {
-      app.listen(PORT, async () => payload.logger.info(`Next.js App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`))
+      app.listen(PORT, async () => console.log(`Next.js App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`))
     } catch (error) {
       console.log(`Error on during starts the server: ${error}`)
     }
